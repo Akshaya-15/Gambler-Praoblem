@@ -10,13 +10,13 @@ then
 ((win++))
 else
 ((lose++))
-fi 
+fi
 
 #UC3
 while [ $startamount -lt 100 ]
-do 
+do
 if [ $number -eq 1 ]
-then 
+then
 	((win++))
 	((startamount++))
 else
@@ -26,3 +26,36 @@ fi
 done 
 echo "$win"
 echo "$lose"
+#UC4
+ComputeDays(){
+no_of_days=20
+ echo $computedays
+}
+while [ no_of_days -lt 20 ] && [ no_of _days  -gt 20 ]
+do
+if [ $number -eq 0 ]
+then 
+((win++))
+((startamount++))
+else
+((lose++))
+((startamount--))
+fi 
+done
+#UC5
+total_days=20
+echo $total_days
+
+while [ total_days -lt 31 ] && [ total_days  -gt 20 ]
+do
+if [ $number -eq 0 ]
+then
+((win++))
+((startamount++))
+else
+((lose++))
+((startamount--))
+fi
+done
+echo "win++"
+echo "lose++"
