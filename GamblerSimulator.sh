@@ -4,8 +4,6 @@ startamount=100
 win=0
 lose=0
 #UC2
-while [ $startamount -gt 1 ]
-do
 number=$((RANDOM%2))
 if [ $number -eq 1 ]
 then
@@ -13,4 +11,18 @@ then
 else
 ((lose++))
 fi 
-done
+
+#UC3
+while [ $startamount -lt 100 ]
+do 
+if [ $number -eq 1 ]
+then 
+	((win++))
+	((startamount++))
+else
+	((lose++))
+	((startamount--))
+fi 
+done 
+echo "$win"
+echo "$lose"
